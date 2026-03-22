@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Birthday Message</title>
+    <title>Password Protected Birthday Message</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .hidden { display: none; }
+        input[type='password'] { padding: 10px; }
+        button { padding: 10px 20px; }
+    </style>
 </head>
 <body>
     <h1>Happy Birthday!</h1>
-    <p id="message"></p>
-    <script src="script.js"></script>
+    <p class="hidden" id="message">Wishing you all the best on your special day!</p>
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+
+    <script>
+        const correctPassword = 'yourpassword';
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            if (inputPassword === correctPassword) {
+                document.getElementById('message').classList.remove('hidden');
+            } else {
+                alert('Incorrect Password!');
+            }
+        }
+    </script>
 </body>
 </html>
