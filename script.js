@@ -1,2 +1,1 @@
-const birthdayMessage = 'Happy Birthday to Syakira! Wishing you all the love and happiness on your special day!';
-console.log(birthdayMessage);
+Happy Birthday, Syakira!\nWishing you a day filled with love and joy.\nMay all your dreams come true!\nEnjoy your special day!\nWith lots of love!
